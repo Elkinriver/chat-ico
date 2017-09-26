@@ -1,0 +1,105 @@
+body{
+    box-sizing: border-box;
+}
+/*---CHAT ONLINE--*/
+.chat{
+width: 100%;
+max-width: 350px;
+height: auto;
+font-family: Roboto,sans-serif;
+top: -100vh;
+right: 2%;
+opacity: .99;
+visibility: visible;
+position: fixed;
+}
+.datos-chat{
+  height: 350px;
+  border: 1px solid #ccc;
+  margin-top: 40px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.datos-chat .mensaje{
+    margin-bottom: 50px
+}
+.datos-chat .mensaje article{
+    width: 100%;
+    display: inline-flex;
+}
+.datos-chat .mensaje img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.datos-chat .mensaje span{
+    margin-left: 10px;
+    width: 80%;
+    color: #616a78;
+    float: right;
+    padding: 10px;
+    background-color: #f5f6f7;
+    font-size: 12px;
+    margin: 2px;
+}
+.datos-chat .mensaje p{
+    margin-left: 10px;
+    color: #616a78;
+    float: right;
+    padding: 10px;
+    color: white;
+    background-color: #48b0f7;
+    font-size: 12px;
+}
+.datos-chat .mensaje small{
+    font-size: 10px;
+    float: right;
+    color: #929daf;
+}
+form{
+    display: block;
+    background: #f4f7f9;
+}
+input[type="text"]{
+    background: none;
+    border: none;
+    padding: 20px;
+}
+input[type="submit"]{
+    background: none;
+    border: none;
+    padding: 10px;
+}
+/*ICONO CHAT*/
+.chat-icono {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #2196F3;
+    right: 0;
+    bottom: 0;
+    margin: 30px;
+    z-index: 10;
+}
+.check-chat {display: none;
+}
+
+.chat-boton{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    background-image: url(ico-chat.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.check-chat:checked ~ .chat {
+  top: 0rem;
+  height: 100vh;
+  translateZ(0px) scaleY(0.2) scaleX(0.4) skew(20deg, 10deg);
+}
+.check-chat:checked + .chat-icono label .chat-boton { background-image: url(close.png);}
